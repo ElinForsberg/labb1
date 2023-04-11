@@ -17,5 +17,6 @@ function theme_scripts(){
     
     add_action('after_setup_theme', 'register_my_menu');
 
+
     add_theme_support('menus');
 ?>

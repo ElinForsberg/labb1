@@ -13,6 +13,9 @@ Template Name: Undersida
 <main>
 
 			<section>
+            <?php
+                while (have_posts()){
+                    the_post(); ?>
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
@@ -31,8 +34,14 @@ Template Name: Undersida
                         
                         </div>
 						<aside id="secondary" class="col-xs-12 col-md-3">
-							<ul class="side-menu">
-                            <?php wp_nav_menu(array('theme_location' => 'sidmeny')); ?>
+                       
+							 <ul class="side-menu">
+                                <li>
+                                
+                                <?php wp_nav_menu(array('theme_location' => 'sidmeny')); ?>
+
+                                </li>
+                                
 								<!-- <li>
 									<a href="undersida.html">Undersida</a>
 								</li>
@@ -45,11 +54,12 @@ Template Name: Undersida
 								<li>
 									<a href="undersida4.html">Undersida 4</a>
 								</li> -->
-							</ul>
+							</ul> 
                            
 						</aside>
 					</div>
 				</div>
+                <?php }?>
 			</section>
 		</main>
 

@@ -28,7 +28,8 @@ Template Name: Undersida2
                         </div>
 						<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
 							<ul class="side-menu">
-								<li>
+                            <?php wp_nav_menu(array('theme_location' => 'sidmeny')); ?>
+								<!-- <li>
 									<a href="undersida.html">Undersida</a>
 								</li>
 								<li>
@@ -40,7 +41,7 @@ Template Name: Undersida2
 								<li>
 									<a href="undersida4.html">Undersida 4</a>
 								</li>
-							</ul>
+							</ul> -->
 						</aside>
 					</div>
 				</div>
