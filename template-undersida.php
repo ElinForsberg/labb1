@@ -35,12 +35,13 @@ Template Name: Undersida
                         </div>
 						<aside id="secondary" class="col-xs-12 col-md-3">
                        
-							 <ul class="side-menu">
-                                <li>
+							 <!-- <ul class="side-menu">
+                                <li> -->
                                 
-                                <?php wp_nav_menu(array('theme_location' => 'sidmeny')); ?>
+                                <?php wp_nav_menu(array('theme_location' => 'sidmeny',
+							'items_wrap' => '<ul class="side-menu">%3$s<ul>')); ?>
 
-                                </li>
+                                <!-- </li> -->
                                 
 								<!-- <li>
 									<a href="undersida.html">Undersida</a>

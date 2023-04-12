@@ -15,20 +15,19 @@
                                         <?php the_title(); ?>
                                     </h1>
 
-
-								<ul class="meta">
+									<ul class="meta">
 									<li>
-										<i class="fa fa-calendar"> <?php echo get_the_date(); ?></i>
-                                         <!-- 1 januari, 2016 -->
-                                        
+										<i class="fa fa-calendar"> <?php echo get_the_date(); ?> </i>
 									</li>
 									<li>
-										<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+										<i class="fa fa-user"></i> <a href="<?php the_permalink(); ?>"><?php echo get_the_author(); ?></a>
+										
 									</li>
 									<li>
-										<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
+										<i class="fa fa-tag"></i> <?php the_category($separator= ', ') ?>
 									</li>
 								</ul>
+								
                                 <p>
                                 <?php the_content(); ?>
                                 </p>

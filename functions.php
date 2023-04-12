@@ -8,6 +8,8 @@ function theme_scripts(){
     add_action('wp_enqueue_scripts','theme_scripts');
     
     add_theme_support('post-thumbnails');
+    add_theme_support('menus');
+    add_theme_support('widgets');
 
     function register_my_menu(){
         register_nav_menu('huvudmeny', 'Huvudmeny');
@@ -17,6 +19,10 @@ function theme_scripts(){
     
     add_action('after_setup_theme', 'register_my_menu');
 
-
-    add_theme_support('menus');
+    register_sidebar([
+        'name' => 'sidebar',
+        'description' => 'blogg sidebar',
+        'id' => 'sidebar'
+    ]);
+   
 ?>

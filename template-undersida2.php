@@ -26,9 +26,11 @@ Template Name: Undersida2
                             </p>
                         
                         </div>
-						<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
-							<ul class="side-menu">
-                            <?php wp_nav_menu(array('theme_location' => 'sidmeny')); ?>
+							<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
+							
+
+							<?php wp_nav_menu(array('theme_location' => 'sidmeny',
+							'items_wrap' => '<ul class="side-menu">%3$s<ul>')); ?>
 								<!-- <li>
 									<a href="undersida.html">Undersida</a>
 								</li>
