@@ -46,43 +46,7 @@
                                 </p>
 								</article>
                                 <?php } ?>
-                            <!-- </article> -->
-							<!-- <article>
-								<img src="img/paris.jpg" />
-								<h2 class="title">
-									<a href="inlagg.html">Mitt andra inlägg</a>
-								</h2>
-								<ul class="meta">
-									<li>
-										<i class="fa fa-calendar"></i> 1 januari, 2016
-									</li>
-									<li>
-										<i class="fa fa-user"></i> <a href="forfattare.html">John Doe</a>
-									</li>
-									<li>
-										<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 3</a>
-									</li>
-								</ul>
-								<p>Integer quis eros at urna pulvinar mollis eget quis ex. Nam fringilla tellus at ligula consequat, sed sagittis ipsum ultricies. Nunc pretium bibendum enim id iaculis. Nam sed leo non sem aliquam imperdiet dictum vitae magna. Phasellus ac accumsan dolor, quis congue mauris. Maecenas vehicula, arcu sed congue euismod, mi urna rhoncus nunc, et feugiat arcu tellus vitae odio. Sed luctus vel lorem vel dictum. Suspendisse potenti. Proin vel efficitur ex. Suspendisse scelerisque rutrum mattis. In sed laoreet augue, non maximus ante. Nam a rhoncus ligula. Aliquam at aliquet lorem. Suspendisse non risus tincidunt, gravida augue non, fringilla libero.</p>
-							</article> -->
-							<!-- <article>
-								<img src="img/london.jpg" />
-								<h2 class="title">
-									<a href="inlagg.html">Hej världen!</a>
-								</h2>
-								<ul class="meta">
-									<li>
-										<i class="fa fa-calendar"></i> 1 januari, 2016
-									</li>
-									<li>
-										<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
-									</li>
-									<li>
-										<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>, <a href="kategori.html">Kategori 3</a>
-									</li>
-								</ul>
-								<p>Sed pretium metus in urna vehicula imperdiet. Fusce at odio vitae felis maximus tincidunt. Nunc porttitor ex a elementum dictum. Maecenas eget arcu nulla. Cras auctor dui aliquet, condimentum orci vel, venenatis nisl. Ut semper magna urna, ac congue dui cursus vitae. Nam sed pharetra leo, vel tincidunt est. Phasellus volutpat tortor nec nulla feugiat congue. Donec quis ligula varius, euismod nisl eu, aliquet metus. Aliquam tempus iaculis odio, sed volutpat mi aliquam aliquet.</p>
-							</article> -->
+                 
 							<nav class="navigation pagination">
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
 								<a class="prev page-numbers" href="">Föregående</a>
@@ -91,23 +55,37 @@
 								<a class="next page-numbers" href="">Nästa</a>
 							</nav>
 						</div>
+
+
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
 								<ul>
 									<li>
-										<form id="searchform" class="searchform">
+										<!-- <form id="searchform" class="searchform">
 											<div>
 												<label class="screen-reader-text">Sök efter:</label>
 												<input type="text" />
 												<input type="submit" value="Sök" />
 											</div>
-										</form>
+										</form> -->
+										<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<!-- <div> -->
+							<label class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'textdomain' ); ?>
+      							
+   							</label>
+								<!-- <label class="screen-reader-text" >Sök efter:</label> -->
+								<!-- <input type="text" />
+								<input type="submit" value="Sök" /> -->
+							<?php get_search_form(); ?>
+							<!-- </div> -->
+						</form>
 									</li>
 								</ul>
 								<ul role="navigation">
 									<li class="pagenav">
 										<h2>Sidor</h2>
-										<ul>
+										<?php dynamic_sidebar('sidebar1'); ?>
+										<!-- <ul>
 											<li class="page_item current_page_item">
 												<a href="">Blogg</a>
 											</li>
@@ -138,24 +116,27 @@
 											</li>
 										</ul>
 									</li>
-									<li>
+									<li> -->
 										<h2>Arkiv</h2>
-										<ul>
+										<?php dynamic_sidebar('sidebar2'); ?>
+										<!-- <ul>
 											<li>
 												<a href="arkiv.html">oktober 2016</a>
 											</li>
 										</ul>
-									</li>
+									</li> -->
+
 									<li class="categories">
 										<h2>Kategorier</h2>
-										<ul>
+										<!-- <ul>
 											<li class="cat-item">
 												<a href="">Natur</a> (1)
 											</li>
 											<li class="cat-item">
 												<a href="">Okategoriserade</a> (3)
 											</li>
-										</ul>
+										</ul> -->
+										<?php dynamic_sidebar('sidebar3'); ?>
 									</li>
 								</ul>
 							</div>

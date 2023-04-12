@@ -22,7 +22,7 @@ Template Name: Undersida4
 						<div class="col-xs-12 col-sm-4 col-md-6">
 							<!-- <img src="img/photo.jpg" /> -->
                             <?php
-                                the_post_thumbnail();
+                                the_post_thumbnail('large');
                                 ?>
 						</div>
 					</div>

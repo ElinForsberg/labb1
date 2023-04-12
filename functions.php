@@ -14,15 +14,25 @@ function theme_scripts(){
     function register_my_menu(){
         register_nav_menu('huvudmeny', 'Huvudmeny');
         register_nav_menu('sidmeny', 'Sidmeny');
-
+        
     }
     
     add_action('after_setup_theme', 'register_my_menu');
 
     register_sidebar([
-        'name' => 'sidebar',
+        'name' => 'sidebar1',
         'description' => 'blogg sidebar',
-        'id' => 'sidebar'
+        'id' => 'sidebar1'
+    ]);
+    register_sidebar([
+        'name' => 'sidebar2',
+        'description' => 'arkiv sidebar',
+        'id' => 'sidebar2'
     ]);
    
+    register_sidebar([
+        'name' => 'sidebar3',
+        'description' => 'kategori sidebar',
+        'id' => 'sidebar3'
+    ]);
 ?>

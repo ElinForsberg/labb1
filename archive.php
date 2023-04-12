@@ -38,4 +38,6 @@
                                 </p>
 								</article>
                                 <?php } ?>
-							
+                            </main>
+
+<?php get_footer(); ?>
