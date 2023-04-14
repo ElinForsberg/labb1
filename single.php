@@ -11,7 +11,7 @@
                                 <article>
 									<?php the_post(); ?>
 								<!-- <img src="img/washington.jpg" /> -->
-                                <?php the_post_thumbnail();?>
+                                <img src= "<?php the_post_thumbnail_url();?>">
 								<!-- <h2 class="title">
 									<a href="inlagg.html">Det tredje inlägget</a>
 								</h2> -->
@@ -21,7 +21,7 @@
                                 </h2>
 								<ul class="meta">
 									<li>
-										<i class="fa fa-calendar"> <?php echo get_the_date(); ?> </i>
+										<i class="fa fa-calendar"></i> <?php echo get_the_date(); ?> 
 									</li>
 									<li>
 										<i class="fa fa-user"></i> <a href="<?php the_permalink(); ?>"><?php the_author_posts_link() ?></a>
@@ -52,15 +52,15 @@
 									</li>
 								</ul>
 								<ul role="navigation">
-									<h2>Sidor</h2>
+									<!-- <h2>Sidor</h2> -->
 										<?php dynamic_sidebar('sidebar1'); ?>
 										
-										<h2>Arkiv</h2>
+										<!-- <h2>Arkiv</h2> -->
 										<?php dynamic_sidebar('sidebar2'); ?>
 										
 
 									
-										<h2>Kategorier</h2>
+										<!-- <h2>Kategorier</h2> -->
 										
 										<?php dynamic_sidebar('sidebar3'); ?>
 									

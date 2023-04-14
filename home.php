@@ -19,8 +19,8 @@
                             <?php while (have_posts()){ ?>
                                 <article>
 									<?php the_post(); ?>
-								<!-- <img src="img/washington.jpg" /> -->
-                                <?php the_post_thumbnail();?>
+								<img src= "<?php the_post_thumbnail_url();?>">
+                                
 								<!-- <h2 class="title">
 									<a href="inlagg.html">Det tredje inlägget</a>
 								</h2> -->
@@ -45,15 +45,20 @@
                                 <?php the_excerpt() ?> 
                                 </p>
 								</article>
+								
                                 <?php } ?>
-                 
+								
 							<nav class="navigation pagination">
+							<?php the_posts_pagination(); ?> 
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
 								<a class="prev page-numbers" href="">Föregående</a>
 								<span class="page-numbers current">1</span>
-								<a class="page-numbers" href="">2</a>
-								<a class="next page-numbers" href="">Nästa</a>
+								<a class="page-numbers" href="">2</a> -->
+								<a class="next page-numbers" href="">Nästa</a> 
+								
+								
 							</nav>
+							
 						</div>
 
 
@@ -83,15 +88,15 @@
 								</ul>
 								<ul role="navigation">
 									<li class="pagenav">
-										<h2>Sidor</h2>
+										<!-- <h2>Sidor</h2> -->
 										<?php dynamic_sidebar('sidebar1'); ?>
 										
-										<h2>Arkiv</h2>
+										<!-- <h2>Arkiv</h2> -->
 										<?php dynamic_sidebar('sidebar2'); ?>
 										
 
 									<li class="categories">
-										<h2>Kategorier</h2>
+										<!-- <h2>Kategorier</h2> -->
 										
 										<?php dynamic_sidebar('sidebar3'); ?>
 									</li>
@@ -104,5 +109,7 @@
 		</main>
 
 		
+		
+
 
 <?php get_footer(); ?>

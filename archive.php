@@ -12,7 +12,7 @@
                                 <article>
 									<?php the_post(); ?>
 								<!-- <img src="img/washington.jpg" /> -->
-                                <?php the_post_thumbnail();?>
+                                <img src= "<?php the_post_thumbnail_url();?>">
 								<!-- <h2 class="title">
 									<a href="inlagg.html">Det tredje inlägget</a>
 								</h2> -->

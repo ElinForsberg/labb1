@@ -49,7 +49,7 @@
 
 	</div>
 
-	<script src="js/script.js"></script>
+	<!-- <script src="js/script.js"></script> -->
     <!-- ska js filen tas bort -->
     <?php wp_footer(); ?>
 </body>

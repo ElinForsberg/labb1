@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Labb 1</title>
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<title><?php wp_title()?></title>
+	<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script src="js/jquery.js"></script>
+	<script src="js/jquery.js"></script> -->
     <?php wp_head(); ?>
 </head>
 <body>
@@ -21,18 +21,18 @@
 						<a class = "logo" href="<?php echo home_url(); ?>">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
-						<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<!-- <form method="get" id="searchform" class="searchform" action="?php echo esc_url( home_url( '/' ) ); ?>">
 							<div>
 							<label>
-      							<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'textdomain' ); ?></span>
-      							<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'textdomain' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-   							</label>
+      							<span class="screen-reader-text">?php echo _x( 'Search for:', 'label', 'textdomain' ); ?></span>
+      							<input type="search" class="search-field" placeholder="?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'textdomain' ); ?>" value="?php echo get_search_query(); ?>" name="s" />
+   							</label> -->
 								<!-- <label class="screen-reader-text" >Sök efter:</label> -->
 								<!-- <input type="text" />
 								<input type="submit" value="Sök" /> -->
 								<?php get_search_form(); ?>
-							</div>
-						</form>
+							<!-- </div>
+						</form> -->
 					</div>
 					<div class="col-xs-4 text-right visible-xs">
 						<div class="mobile-menu-wrap">
@@ -52,6 +52,7 @@
 		<div class="mobile-search">
 			<form id="searchform" class="searchform">
 				<div>
+				<?php get_search_form(); ?>
 					<!-- <label class="screen-reader-text">Sök efter:</label>
 					<input type="text" />
 					<input type="submit" value="Sök" /> -->

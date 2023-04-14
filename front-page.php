@@ -12,9 +12,9 @@
 						<div class="col-xs-12">
 							<div class="hero">
 								<!-- <img src="img/city.jpg" /> -->
-                                <?php
-                                the_post_thumbnail();
-                                ?>
+                                
+                                <img src= "<?php the_post_thumbnail_url();?>">
+                                
 								<div class="text">
 									<!-- <h1>Hej och välkommen!</h1> -->
                                     <h1>
