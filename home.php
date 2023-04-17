@@ -10,49 +10,24 @@
 						<div id="primary" class="col-xs-12 col-md-9">
 							
                            
-               
+							<!-- Här hämtas sidans titel in -->
                             <h1>
                                 <?php wp_title(""); ?> 
                             </h1>
 
-							
+							<!-- Här kommer loopen som hämtar alla inlägg -->
                             <?php while (have_posts()){ ?>
-                                <article>
-									<?php the_post(); ?>
-									<img src= "<?php the_post_thumbnail_url();?>">
-                                
+                              <?php  get_template_part('article')?>
 								
-                                	<h2 class ="title">
-										<a href="<?php the_permalink(); ?>">
-                                    	<?php the_title(); ?></a>
-                                	</h2>
-									<ul class="meta">
-										<li>
-											<i class="fa fa-calendar"> <?php echo get_the_date(); ?> </i>
-										</li>
-										<li>
-											<i class="fa fa-user"></i> <a href="<?php the_permalink(); ?>"><?php the_author_posts_link() ?></a>
-										
-										</li>
-										<li>
-											<i class="fa fa-tag"></i> <?php the_category($separator= ', ') ?>
-										</li>
-									</ul>
-								
-                                	<p>
-                                		<?php the_excerpt() ?> 
-                                	</p>
-								</article>
-								
-                                <?php } ?>
-								
+                            <?php } ?>
+							<!-- Här är sidnavigeringen	 -->
 							<nav class="navigation pagination">
 							<?php echo paginate_links(); ?> 
 							</nav>
 							
 						</div>
 
-
+						<!-- Här hämtar jag min sidebar -->
 						<?php get_sidebar('sidebar') ?>
 					</div>
 				</div>

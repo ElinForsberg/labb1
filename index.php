@@ -1,1 +1,1 @@
-hej hej från index
+Detta är indexsidan

@@ -25,16 +25,19 @@ function theme_scripts(){
     }
     
     add_action('after_setup_theme', 'register_my_menu');
-
+    
     register_sidebar([
         'name' => 'sidebar1',
         'description' => 'blogg sidebar',
-        'id' => 'sidebar1'
+        'id' => 'sidebar1',
+       
     ]);
+
     register_sidebar([
         'name' => 'sidebar2',
         'description' => 'arkiv sidebar',
-        'id' => 'sidebar2'
+        'id' => 'sidebar2',
+        
     ]);
    
     register_sidebar([
