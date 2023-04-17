@@ -1,3 +1,5 @@
+<!-- Detta är sökfunktionen som sedan läses in på de andra sidorna -->
+
 <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url(home_url('/')); ?>">
     <div>
         <label class="screen-reader-text" for="search"><?php _x('Sök efter:', 'label'); ?> </label>

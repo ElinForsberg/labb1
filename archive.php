@@ -1,4 +1,4 @@
-
+<!-- Detta är arkiv sidan för mina blogginlägg -->
 <?php get_header() ?>
 <main>
 			<section>
@@ -11,11 +11,9 @@
                             <?php while (have_posts()){ ?>
                                 <article>
 									<?php the_post(); ?>
-								<!-- <img src="img/washington.jpg" /> -->
+								
                                 <img src= "<?php the_post_thumbnail_url();?>">
-								<!-- <h2 class="title">
-									<a href="inlagg.html">Det tredje inlägget</a>
-								</h2> -->
+								
                                 <h2 class ="title">
 								<a href="<?php the_permalink(); ?>">
                                     <?php the_title(); ?></a>
@@ -32,7 +30,7 @@
 										<i class="fa fa-tag"></i> <?php the_category($separator= ', ') ?>
 									</li>
 								</ul>
-								<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex. Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis. In sed mi mi. Praesent condimentum sollicitudin nibh. Vivamus vulputate purus quis volutpat fringilla. Ut tortor libero, semper eget dolor vel, hendrerit tempus dui. Suspendisse dictum efficitur blandit. In porta scelerisque nulla ac placerat.</p>  -->
+								
                                 <p>
                                 <?php the_excerpt() ?> 
                                 </p>
