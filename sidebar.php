@@ -5,7 +5,7 @@
 		<ul>
 			<li>
 										
-				<?php get_search_form(); ?>
+            <?php dynamic_sidebar('sidebar4'); ?>
 							
 			</li>
 		</ul>
@@ -20,8 +20,10 @@
 				<?php dynamic_sidebar('sidebar2'); ?>
                                    
 									
-										
-				<?php dynamic_sidebar('sidebar3'); ?>
+				
+                <?php dynamic_sidebar('sidebar3'); ?>							
+									
+				
 									
 		</ul>
 	</div>

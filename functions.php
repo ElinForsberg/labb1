@@ -25,27 +25,34 @@ function theme_scripts(){
     }
     
     add_action('after_setup_theme', 'register_my_menu');
-    
-    register_sidebar([
-        'name' => 'sidebar1',
-        'description' => 'blogg sidebar',
-        'id' => 'sidebar1',
-       
-    ]);
 
-    register_sidebar([
-        'name' => 'sidebar2',
-        'description' => 'arkiv sidebar',
-        'id' => 'sidebar2',
-        
-    ]);
-   
-    register_sidebar([
-        'name' => 'sidebar3',
-        'description' => 'kategori sidebar',
-        'id' => 'sidebar3'
-    ]);
+    function widget_registration($name, $id, $description,$beforeWidget, $afterWidget, $beforeTitle, $afterTitle){
+        register_sidebar( array(
+            'name' => $name,
+            'id' => $id,
+            'description' => $description,
+            'before_widget' => $beforeWidget,
+            'after_widget' => $afterWidget,
+            'before_title' => $beforeTitle,
+            'after_title' => $afterTitle,
+        ));
+    }
+
+    function multiple_widget_init(){
+        widget_registration('sidebar1', 'sidebar1', 'meny widget', '<li>', '</li>', '<h4>', '</h4>');
+        widget_registration('sidebar2', 'sidebar2', 'arkiv widget', '<li>', '</li>', '<h4>', '</4>');
+        widget_registration('sidebar3', 'sidebar3', 'kategori widget', '<li class="categories %2$s">', '</li>', '<h4>', '</4>');
+        widget_registration('sidebar4', 'sidebar4', 'sokfalt widget', '', '', '<h4>', '</h4>');
+        widget_registration('footer1', 'footer1', 'om oss widget', '', '', '', '');
+        widget_registration('footer2', 'footer2', 'kontakt widget', '', '', '', '');
+        widget_registration('footer3', 'footer3', 'social meny widget', '', '', '<h4>', '</h4>');
+    }
+    
+    add_action('widgets_init', 'multiple_widget_init');
+
+    
 
     
     
 ?>
+
