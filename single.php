@@ -1,4 +1,4 @@
-
+<!-- Detta är sidan för enskilda blogginlägg -->
 <?php get_header() ?>
 
 		<main>

@@ -1,4 +1,4 @@
-
+<!-- Detta är kontakt sidan. Kontaktformuläret är ett plugin: Contactform 7 -->
 <?php get_header(); ?>
 
 
@@ -7,9 +7,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<h1>Kontakt</h1>
+							<h1> <?php wp_title(""); ?> </h1>
 							<form>
-                                <?php echo apply_shortcodes('[contact-form-7 id="84" title="Kontaktformulär 1"]'); ?>
+                            <?php while (have_posts()){ ?>
+                                <?php the_post(); ?>
+								<?php  the_content();?>
+                            <?php } ?>    
 							</form>
 							
 						</div>

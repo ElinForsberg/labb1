@@ -14,6 +14,7 @@ function theme_scripts(){
 
     add_action('wp_enqueue_scripts','theme_scripts');
     
+    // lägger till support för att hämta bilder, menyer och widgetar
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
     add_theme_support('widgets');
@@ -26,6 +27,7 @@ function theme_scripts(){
     
     add_action('after_setup_theme', 'register_my_menu');
 
+    // Registrerar och lägger till widgetar
     function widget_registration($name, $id, $description,$beforeWidget, $afterWidget, $beforeTitle, $afterTitle){
         register_sidebar( array(
             'name' => $name,
@@ -46,6 +48,7 @@ function theme_scripts(){
         widget_registration('footer1', 'footer1', 'om oss widget', '', '', '', '');
         widget_registration('footer2', 'footer2', 'kontakt widget', '', '', '', '');
         widget_registration('footer3', 'footer3', 'social meny widget', '', '', '<h4>', '</h4>');
+        widget_registration('footer4', 'footer4', 'copywrite widget', '','','','');
     }
     
     add_action('widgets_init', 'multiple_widget_init');

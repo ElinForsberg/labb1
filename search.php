@@ -1,5 +1,5 @@
 
-
+<!-- Här kommer sökresultatet -->
 <?php get_header(); ?>
 
 
