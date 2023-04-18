@@ -1,3 +1,4 @@
+<!-- Här är min loop för att hämta inlägg. Denna kan sedan hämtas från de andra sidorna -->
 <article>
 	<?php the_post(); ?>
 		<img src= "<?php the_post_thumbnail_url();?>">

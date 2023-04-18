@@ -38,12 +38,12 @@
 		</header>
 
 		<div class="mobile-search">
-			<!-- <form id="searchform" class="searchform"> -->
+			
 				<div>
 				<?php get_search_form(); ?>
 					
 				</div>
-			<!-- </form> -->
+			
 		</div>
 
 		<nav id="nav">
